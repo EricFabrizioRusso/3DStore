@@ -1,13 +1,37 @@
 import { faL } from '@fortawesome/free-solid-svg-icons';
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal';
+import Links from '../Header/Links/Links';
+import BuyPage from './Pages/BuyPage';
 
 
-const Card = (title,desc,img) => {
+const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCard}) => {
 
   const [modalOpen, setmodalOpen] = useState(false);
   const image = document.getElementById('selectImg');
+  const [blockBtn, setBlockBtn] = useState(true);
 
+
+
+  const handleDelete=()=>{
+
+
+    const objFounded= MainformData.find(obj => obj.title === title)
+  
+    if(!objFounded){
+  
+     setBlockBtn(true);
+    }
+
+  }
+
+
+  useEffect(() => {
+    
+    handleDelete()
+
+  }, [triggerCard]);
+  
 
   const handleModal=(newState)=>{
 
@@ -22,28 +46,73 @@ const Card = (title,desc,img) => {
     }
 
   }
+
+  const [formData, setFormData] = useState({
+
+
+    img: img,
+    title: title,
+    price:price,
+
+  });
+
+
+  const handleChange =(e)=>{
+
+    const {name, value} = e.target;
+    setFormData({
+
+      ...formData,
+
+      [name]: value,
+
+    })
+
+
+  }
+
+
+  const handleSubmit=(e)=>{
+
+    e.preventDefault();
+
+    handleData(formData);
+    setBlockBtn(false)
+    //console.log(formData)
+
+    
+
+  }
+
   
 
 
   return (
-    <div className="card m-3 mycard  text-light bg-dark">
+    <div className="card m-3 mycard text-light bg-dark">
         <a onClick={()=> handleModal()}>
-          <img id='selectImg' src="https://source.unsplash.com/random/800x800?sig=1" className="card-img-top" alt="..."/>
+          <img id='selectImg' loading='lazy' src={img} className="card-img-top" alt="..."/>
         </a>
-        
-        <div className="card-body">
-            <h5 className="card-title fs-4">Card title</h5>
-            <p className="card-textb fs-5">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div className='d-flex'>
-              <a href="#" className="btn btn-secondary bg-secondary m-auto me-auto">Añadir al carrito</a>
-              <input className='m-3 bg-dark border rounded border-light text-light addremove' type="number" min='0'/>
-            </div>
+        <div className="card-body fs-6">
+            <h5 className="card-title">{title}</h5>
+            <p className="card-text">{desc}</p>
+            <p className='card-text fs-5'>${price}</p>
+            <form className='d-flex flex-column' onSubmit={handleSubmit}>
+              {/* <input name='count' 
+              value={formData.count} 
+              onChange={handleChange} 
+              className='m-auto mb-3 text-center text-light fs-6 lh-lg bg-dark border rounded border-light addremove ' type="number" min='0' placeholder='Cantidad'/> */}
+              {blockBtn ?
+                (<input id='addCart'  type='submit' value='Agregar al carrito' className="btn btn-primary m-auto me-auto w-100 lh-lg"/>)
+                :(<h1 className='fs-6 text-center bg-success p-2 text-light'>Producto Agregado</h1>)
+              }
+            </form>
         </div>
         {modalOpen &&
 
-          <Modal image={image} handleModal={handleModal} isOpen={modalOpen}/>
+          <Modal image={image} image2={img2} image3={img3} handleModal={handleModal} isOpen={modalOpen}/>
           
         }
+
    </div>
   )
 }

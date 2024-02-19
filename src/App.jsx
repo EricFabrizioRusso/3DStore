@@ -1,29 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import BoxSection from './components/Main/BoxSection'
-import Header from './components/Header/Header'
-import Modal from './components/Main/Modal'
+import React from 'react';
+//import { BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom'
+import Home from './components/Home'
+
 
 function App() {
 
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => {
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+  
 
   return (
     <>
-      <Header/>
-      <BoxSection/>
-      
-      
+        <Home/>
+      {/* <HashRouter>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/buy/:title' element={<BuyPage/>}/>
+          <Route path='*' element={<h1>Error404: Pagina no encontrada</h1>}/>
+        </Routes>
+      </HashRouter> */}
     </>
   )
 }

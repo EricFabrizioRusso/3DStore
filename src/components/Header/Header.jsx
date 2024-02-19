@@ -5,10 +5,9 @@ import Links from './Links/Links';
 
 const Header = () => {
   return (
-    <div className='bg-secondary'>
-      <div className='text-center mb-5 p-1 sticky-top d-flex flex-row justify-content-between container-xxl '>
+    <div className='bg-secondary sticky-top fs-6'>
+      <div className=' mb-5 p-1  '>
           <NavBar/>
-          <Links/>
       </div>
 
     </div>

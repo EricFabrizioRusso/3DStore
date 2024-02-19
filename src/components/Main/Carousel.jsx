@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Carousel = ({image}) => {
+const Carousel = ({image,imageC2,imageC3}) => {
   return (
     <div id="carouselExampleIndicators" className="carousel">
   <div className="carousel-indicators">
@@ -10,13 +10,13 @@ const Carousel = ({image}) => {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src={image.src} className="w-100" alt="..."/>
+      <img loading='lazy' src={image.src} className="w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="https://source.unsplash.com/random/800x800?sig=1" className="w-100" alt="..."/>
+      <img loading='lazy' src={imageC2} className="w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="https://source.unsplash.com/random/800x800?sig=1" className="w-100" alt="..."/>
+      <img loading='lazy' src={imageC3}className="w-100" alt="..."/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

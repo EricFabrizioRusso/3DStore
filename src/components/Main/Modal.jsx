@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Carousel from './Carousel'
 
 
-const Modal = ({ image, handleModal, isOpen }) => {
+const Modal = ({ image,image2,image3, handleModal, isOpen }) => {
 
   if(isOpen !== true) return
   
@@ -31,7 +31,7 @@ const Modal = ({ image, handleModal, isOpen }) => {
       <button id='btn-close' className='btn fs-1 text-light m-2'>X</button>
       <div id='bg-content' className='modal-content'>
         <button className='btn'></button>
-         <Carousel image={image}/>
+         <Carousel image={image} imageC2={image2} imageC3={image3}/>
       </div>
        
     </div>

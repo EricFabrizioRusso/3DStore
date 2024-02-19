@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
+
+
 body{
 
-  background: #292929;
+  background: #242424;
   color: #fff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Lexend';
   font-size: 24px;
   min-height: 100vh;
   margin: 0;
@@ -15,17 +18,28 @@ body{
 }
 
 .addremove{
-  width: 100%;
+  width: 15%;
 }
 
 .mycard{
 
-  width: 500px;
+  width: 400px;
+}
+
+
+.itemImg{
+
+
+  max-width: 10%;
+  max-height: 10%;
+  margin: auto;
+
 }
 
 .bg-secondary{
 
-  background-color: #6226d1 !important;
+
+  background: linear-gradient(rgb(113, 57, 216), rgba(98, 43, 201, 0.95)) !important;
 
 }
 
@@ -33,7 +47,12 @@ li{
   list-style: none;
 }
 
+.myNavBar{
 
+  max-width: 1200px;
+  width: 100%;
+
+}
 
 .mymodal {
   position: fixed;
@@ -41,11 +60,33 @@ li{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1050;
+}
+
+.buySection{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1050;
+
+
+}
+
+.buyContainer{
+
+  max-width: 1200px;
+  width: 100%;
+
+
+
 }
 
 .navbar{
@@ -69,6 +110,37 @@ li{
   cursor: pointer;
 }
 
+.finalBuy{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.linkItem{
+
+  opacity: .9;
+
+}
+.linkItem:hover{
+
+  opacity: 1;
+
+}
+
+
+
+
+#selectImg:hover{
+
+  transition: all ease-in-out .3s;
+  opacity: .7;
+
+}
+
 #btn-close{
 
   position: absolute;
@@ -81,6 +153,29 @@ li{
   
   opacity: 1;
 }
+#btnItem{
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  width: 35px;
+  height: 35px;
+  opacity: .7;
+}
+#btnItem:hover{
+  
+  opacity: 1;
+}
+
+#btnFinalBuy{
+
+  max-width: 500px;
+  width: 100%;
+  line-height: 40px;
+
+}
+
 
 
 
@@ -104,5 +199,18 @@ li{
 
 
 
+
+
+  
+}
+
+@media screen and (max-width: 992px){
+
+  .linkContainer{
+
+    border-top: #fff 3px solid;
+  
+  }
+  
   
 }
