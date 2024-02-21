@@ -5,7 +5,7 @@ import Links from '../Header/Links/Links';
 import BuyPage from './Pages/BuyPage';
 
 
-const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCard}) => {
+const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCard,id}) => {
 
   const [modalOpen, setmodalOpen] = useState(false);
   const image = document.getElementById('selectImg');
@@ -53,6 +53,8 @@ const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCar
     img: img,
     title: title,
     price:price,
+    ammount:1,
+    id: id
 
   });
 

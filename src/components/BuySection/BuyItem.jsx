@@ -1,43 +1,109 @@
 import React, { useState, useEffect } from 'react';
 
-const BuyItem = ({item,formData,handleDeleteData,handleTotalPrice}) => {
+const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,calcTotal}) => {
 
 
-  if(!item) return <h1 className='text-center'>No se ha encontrado ningun producto</h1>
 
-  let {title,price,img}= item;
+
+  let {title,price,img,ammount}= item;
   const [cantidad, setCantidad] = useState(1);
   const [precio, setPrecio] = useState(price);
+  const [update, setUpdate] = useState(0);
+  let basePrice=price
+
+  useEffect(() => {
+
+    handleSendData()
+
+  }, [itemTrigger]);
 
 
 
+  const handleSendData=()=>{
+
+    handleChangeData(item);
+   
+
+  }
 
 
   const remove=()=>{
 
-   setPrecio( precio - price)
-   setCantidad(cantidad - 1)
-   handleTotalPrice(precio);
+    setPrecio( precio - basePrice)
+    setCantidad(cantidad - 1)
 
+   let obj=formData.find((obj)=>obj.title === title)
 
-   if(cantidad <= 0){
+   if(obj){
 
-    handleDelete;
+      if(cantidad === 1 || precio === 0){
 
-   }
+        handleDelete();
+
+        
+      }
+     
+    obj['ammount']=cantidad - 1
+
     
+    console.log(obj)
+    handleChangeData(obj);
+     
+   }else{
+
+     console('no se encontro el obj')
+   }
+
+
+   
+
+   /*let timer=setTimeout(() => {
+
+    updateFather()
+    
+   }, 1000);
+
+   clearTimeout(timer);*/
+   
+
+
+
+
+
   }
 
   const add=()=>{
 
-    setPrecio( precio + price)
+    setPrecio( precio + basePrice)
     setCantidad(cantidad + 1)
-    handleTotalPrice({precio,title});
 
-    
+            
+    let obj=formData.find((obj)=>obj.title === title)
+
+
+    if(obj){
+      
+        
+      obj['ammount']=cantidad + 1
+        console.log(obj);
+  
+   
+      
+     handleChangeData(obj);
+
+    }else{
+
+      console('no se encontro el obj')
+    }
 
 
   }
+
+
+
+
+
+
 
 
   /*const handleChange=(e)=>{
@@ -70,16 +136,13 @@ const BuyItem = ({item,formData,handleDeleteData,handleTotalPrice}) => {
 
     console.log('eliminando item')
     let newForm=formData.filter((el) => el.title !== title)
-
-
     handleDeleteData(newForm);
+   
+
+
   }
 
-  useEffect(() => {
-    
 
-    handleTotalPrice(precio)
-  }, []);
   
 
 
