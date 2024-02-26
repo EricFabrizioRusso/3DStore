@@ -5,26 +5,26 @@ const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,ca
 
 
 
-  let {title,price,img,ammount}= item;
+  let {title,price,img}= item;
   const [cantidad, setCantidad] = useState(1);
   const [precio, setPrecio] = useState(price);
-  const [update, setUpdate] = useState(0);
   let basePrice=price
+  console.log(item,'item')
 
   useEffect(() => {
 
-    handleSendData()
+    //handleSendData()
 
   }, [itemTrigger]);
 
 
 
-  const handleSendData=()=>{
+  /*const handleSendData=()=>{
 
     handleChangeData(item);
    
 
-  }
+  }*/
 
 
   const remove=()=>{
@@ -40,10 +40,13 @@ const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,ca
 
         handleDelete();
 
+        obj['ammount']=cantidad 
         
+      }else{
+
+        obj['ammount']=cantidad - 1
       }
      
-    obj['ammount']=cantidad - 1
 
     
     console.log(obj)
@@ -136,6 +139,7 @@ const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,ca
 
     console.log('eliminando item')
     let newForm=formData.filter((el) => el.title !== title)
+    console.log(newForm,'newForm')
     handleDeleteData(newForm);
    
 
@@ -158,9 +162,9 @@ const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,ca
             <img loading='lazy' src={img}className="card-img-top itemImg" alt="..."/>
             <button id='btnItem' onClick={handleDelete} className=' m-1 bg-danger rounded-circle text-light'>X</button>
             <div className="card-body p-0 m-2">
-                <h5 className="card-title text-light">{title}</h5>
+                <h5 className="card-title text-light fs-6">{title}</h5>
                 <div className='d-flex'>
-                  <p className="card-text text-light m-1">X{cantidad}</p>
+                  <p className="card-text text-light m-1 fs-6">X{cantidad}</p>
                   <p className="card-text text-success  fs-5">$ {precio}</p>
                 </div>
                  <a onClick={add} href="#" className="btn btn-primary m-2">Añadir</a>

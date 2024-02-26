@@ -5,7 +5,7 @@ import Links from '../Header/Links/Links';
 import BuyPage from './Pages/BuyPage';
 
 
-const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCard,id}) => {
+const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCard,id,ammount}) => {
 
   const [modalOpen, setmodalOpen] = useState(false);
   const image = document.getElementById('selectImg');

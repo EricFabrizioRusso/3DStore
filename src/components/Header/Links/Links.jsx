@@ -15,6 +15,7 @@ const Links = () => {
 
   const handleModal=()=>{
 
+    document.body.style.overflow = 'hidden';
     setMyProp(true)
 
   }

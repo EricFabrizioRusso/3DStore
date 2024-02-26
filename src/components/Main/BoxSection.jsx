@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Card from './Card'
-import { modelEx, modelEx2, modelEx3 } from '../../helpers/Imgs';
+import { modelEx, modelEx2, modelEx3,modelEx4 } from '../../helpers/Imgs';
 import BuyPage from './Pages/BuyPage';
 import BuyItem from '../BuySection/BuyItem';
 import { MyContext } from '../../helpers/Context';
@@ -46,6 +46,7 @@ const BoxSection = () => {
     
     const newData=[...formData,data]
     setFormData(newData);
+
     
     
     
@@ -91,18 +92,14 @@ const BoxSection = () => {
   
   const handleDeleteData=(dItem)=>{
 
-
     console.log('item eliminado', dItem)
+
     setFormData(dItem);
-    setCaclTotal(dItem);
-    handleTotal();
-    //console.log(dItem);
     setTriggerCard(triggerCard + 1);
-
-
-
-
+    
   }
+  console.log(formData,'formData')
+  console.log(caclTotal,'calcTotal')
    useEffect(() => {
      
      
@@ -116,14 +113,15 @@ const BoxSection = () => {
        
      }
      
-     handleTotal();
-     console.log('renderizado')
+    setCaclTotal(formData)
+    handleTotal();
+
      
-   }, [myProp,formData,handleChangeData,triggerCard]);
+   }, [myProp,formData,handleChangeData]);
 
 
 
-  console.log(caclTotal)
+
 
 
 
@@ -134,11 +132,13 @@ const BoxSection = () => {
 
    document.addEventListener('click',(e)=>{
 
-    if(e.target.id === 'buyModal' || e.target.id === 'btn-close'){
+    if(e.target.id === 'buyModal' || e.target.id === 'btn-close-buy'){
 
   
       buyModal.classList.add('d-none')
       setMyProp(false);
+      document.body.style.overflow = '';
+      console.log('click')
 
     }
 
@@ -196,15 +196,26 @@ const BoxSection = () => {
         triggerCard={triggerCard}
         id={'ejemplo3'}
         />
+        <Card title={modelEx4.title} 
+        desc={modelEx4.desc} 
+        img={modelEx4.img}
+        img2={modelEx4.img2}
+        img3={modelEx4.img3}
+        price={modelEx4.price}
+        handleData={handleData}
+        MainformData={formData}
+        triggerCard={triggerCard}
+        id={'ejemplo4'}
+        />
 
      
       
 
-      <div onClick={handleModal} id='buyModal' className='buySection d-flex flex-column justify-content-center align-items-center d-none'>
+      <div onClick={handleModal} id='buyModal' className='buySection d-none overflow-auto'>
           <div className='buyContainer rounded d-flex flex-column mb-5 '>
-            {
 
-              formData.map((item,index) =>(
+            {
+              formData.map((item) =>(
               
                 <BuyItem item={item}
                  key={item.id}
@@ -224,17 +235,21 @@ const BoxSection = () => {
 
             }
           </div>
+
           {formData.length >= 1 ?
 
             (<div className='finalBuy d-flex flex-column'>
-              <h1 className='mb-3'>${result}</h1>
+              <h1 className='mb-3 bg-dark p-3 border border-primary fs-4 rounded'>Total: ${result}</h1>
               {/* <a id='btnFinalBuy' onClick={handleItemTrigger}  className='btn btn-primary m-3 fs-4'>Calcular</a> */}
-              <a id='btnFinalBuy'  className='btn btn-primary m-3 fs-4' href={whatsappLink}>Ordenar</a>
+              <a id='btnFinalBuy'  className='btn btn-primary m-3 fs-4' href={whatsappLink}>Hacer pedido</a>
+              <button onClick={handleModal} id='btn-close-buy' className='btn fs-1 text-light m-2'>X</button>
             </div>)
-            : <h1 className='text-center'>No se ha encontrado ningun producto</h1>
 
+              :<div className='d-flex flex-column'>
+              <button onClick={handleModal} id='btn-close-buy' className='btn fs-1 text-light m-2'>X</button>
+                  <h1 id='noProducts' className='text-center'>No se ha encontrado ningun producto</h1>
+              </div>
           }
-          <button onClick={handleModal} id='btn-close' className='btn fs-1 text-light m-2'>X</button>
       </div> 
       
 

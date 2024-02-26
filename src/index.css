@@ -65,6 +65,8 @@ li{
   justify-content: center;
   align-items: center;
   z-index: 1050;
+ 
+
 
 }
 
@@ -77,6 +79,11 @@ li{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1050;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
 
 
@@ -150,6 +157,13 @@ li{
   top: 0;
   opacity: .5;  
 }
+#btn-close-buy{
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: .5;  
+}
 
 #btn-close:hover{
   
@@ -177,10 +191,7 @@ li{
   line-height: 40px;
 
 }
-.hide{
 
-  display: none;
-}
 
 
 
@@ -202,6 +213,45 @@ li{
     justify-content: center;
     align-items: center;
   }
+
+  .buySection{
+
+   display: block;
+   margin: auto;
+
+
+  }
+
+  .buyContainer{
+
+    margin-top: 5em; 
+    
+
+  }
+
+  #btn-close-buy{
+
+    align-items: end;
+    opacity: .5;
+
+
+  }
+
+  #btnFinalBuy{
+
+    max-width: 500px;
+    width: 80%;
+    line-height: 40px;
+  
+  }
+
+  #noProducts{
+
+
+
+  }
+  
+
 
 
 
