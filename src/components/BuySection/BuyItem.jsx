@@ -160,7 +160,7 @@ const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,ca
     <div className='buyItem m-2 border border-light border-opacity-10 fs-6'>
         <div className="card bg-dark d-flex flex-row">
             <img loading='lazy' src={img}className="card-img-top itemImg" alt="..."/>
-            <button id='btnItem' onClick={handleDelete} className=' m-1 bg-danger rounded-circle text-light'>X</button>
+            {/* <button id='btnItem' onClick={handleDelete} className=' m-1 bg-danger rounded-circle text-light'>X</button> */}
             <div className="card-body p-0 m-2">
                 <h5 className="card-title text-light fs-6">{title}</h5>
                 <div className='d-flex'>

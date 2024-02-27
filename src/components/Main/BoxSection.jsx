@@ -154,6 +154,12 @@ const BoxSection = () => {
   const whatsappLink=`https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`
   //console.log(formData,'formulario')
 
+  const handleWs=()=>{
+
+    console.log(caclTotal);
+
+  }
+
 
 
 
@@ -241,7 +247,7 @@ const BoxSection = () => {
             (<div className='finalBuy d-flex flex-column'>
               <h1 className='mb-3 bg-dark p-3 border border-primary fs-4 rounded'>Total: ${result}</h1>
               {/* <a id='btnFinalBuy' onClick={handleItemTrigger}  className='btn btn-primary m-3 fs-4'>Calcular</a> */}
-              <a id='btnFinalBuy'  className='btn btn-primary m-3 fs-4' href={whatsappLink}>Hacer pedido</a>
+              <a id='btnFinalBuy' onClick={handleWs}  className='btn btn-primary m-3 fs-4'>Hacer pedido</a>
               <button onClick={handleModal} id='btn-close-buy' className='btn fs-1 text-light m-2'>X</button>
             </div>)
 
