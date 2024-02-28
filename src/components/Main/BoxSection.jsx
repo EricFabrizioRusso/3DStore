@@ -15,6 +15,7 @@ const BoxSection = () => {
   
   const [formData, setFormData] = useState([]);
   const {myProp, setMyProp} = useContext(MyContext)
+  const {product, setProduct} = useContext(MyContext)
   const [triggerCard, setTriggerCard] = useState(1);
   const [updateSection, setUpdateSection] = useState(0);
   const [itemTrigger, setitemTrigger] = useState(0);
@@ -111,6 +112,16 @@ const BoxSection = () => {
        
        
        
+     }
+
+     if(formData.length >= 1){
+
+      setProduct(true)
+
+     }else{
+
+      setProduct(false)
+
      }
      
     setCaclTotal(formData)

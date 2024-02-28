@@ -5,10 +5,10 @@ export const MyContext = createContext();
 
 export const MyProvider = ({ children }) => {
   const [myProp, setMyProp] = useState(false);
-
+  const [product, setProduct] = useState(false);
 
   return (
-    <MyContext.Provider value={{ myProp, setMyProp }}>
+    <MyContext.Provider value={{ myProp, setMyProp, product,setProduct }}>
       {children}
     </MyContext.Provider>
   );
