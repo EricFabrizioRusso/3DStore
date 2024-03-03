@@ -105,7 +105,7 @@ const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCar
               className='m-auto mb-3 text-center text-light fs-6 lh-lg bg-dark border rounded border-light addremove ' type="number" min='0' placeholder='Cantidad'/> */}
               {blockBtn ?
                 (<input id='addCart'  type='submit' value='Agregar al carrito' className="btn btn-primary m-auto me-auto w-100 lh-lg"/>)
-                :(<h1 className='fs-6 text-center bg-success p-2 text-light'>Producto Agregado</h1>)
+                :(<h1 className='fs-6 text-center bg-success  text-light btn m-auto me-auto w-100 lh-lg'>Producto Agregado</h1>)
               }
             </form>
         </div>
