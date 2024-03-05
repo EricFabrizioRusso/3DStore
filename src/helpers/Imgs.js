@@ -1,10 +1,10 @@
 const modelEx={
 
-    title: 'Ejemplo1',
-    desc: 'Titulo de ejemplo',
+    title: 'Maseta LowPoly',
+    desc: 'Maseta Boca:7.5cm Base:7.5cm Alto:8cm largo',
     price: 2000,
-    img: 'img/Example.png',
-    img2: 'img2',
+    img: 'img/MasetaL1.jpg',
+    img2: 'img/MasetaL2.jpg',
     img3: 'img3',
 
 
