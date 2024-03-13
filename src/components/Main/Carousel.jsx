@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Carousel = ({image,imageC2,imageC3}) => {
+const Carousel = ({imageC1,imageC2,imageC3}) => {
   return (
     <div id="carouselExampleIndicators" className="carousel">
   <div className="carousel-indicators">
@@ -10,7 +10,7 @@ const Carousel = ({image,imageC2,imageC3}) => {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img loading='lazy' src={image.src} className="w-100" alt="..."/>
+      <img loading='lazy' src={imageC1} className="w-100" alt="..."/>
     </div>
     <div className="carousel-item">
       <img loading='lazy' src={imageC2} className="w-100" alt="..."/>

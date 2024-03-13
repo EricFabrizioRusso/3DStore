@@ -23,7 +23,8 @@ const Modal = ({ image,image2,image3, handleModal, isOpen }) => {
 
 
 
-
+  console.log(image)
+  console.log(image2)
 
 
   return (
@@ -31,7 +32,7 @@ const Modal = ({ image,image2,image3, handleModal, isOpen }) => {
       <button id='btn-close' className='btn fs-1 text-light m-2'>X</button>
       <div id='bg-content' className='modal-content'>
         <button className='btn'></button>
-         <Carousel image={image} imageC2={image2} imageC3={image3}/>
+         <Carousel imageC1={image} imageC2={image2} imageC3={image3}/>
       </div>
        
     </div>

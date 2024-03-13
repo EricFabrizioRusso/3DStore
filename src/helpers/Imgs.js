@@ -2,7 +2,7 @@ const modelEx={
 
     title: 'Maseta LowPoly',
     desc: 'Maseta Boca:7.5cm Base:7.5cm Alto:8cm largo',
-    price: 2000,
+    price: 7000,
     img: 'img/MasetaL1.jpg',
     img2: 'img/MasetaL2.jpg',
     img3: 'img3',
@@ -11,11 +11,11 @@ const modelEx={
 }
 const modelEx2={
 
-    title: 'Ejemplo2',
-    desc: 'Titulo de ejemplo',
-    price: 2500,
-    img: 'img/Example2.png',
-    img2: 'img2',
+    title: 'Llaveros River',
+    desc: 'Llaveros River Plate',
+    price: 750,
+    img: 'img/LlaveroR1.jpg',
+    img2: 'img/LlaveroR2.jpg',
     img3: 'img3',
 
 

@@ -200,7 +200,6 @@ const BoxSection = () => {
         MainformData={formData}
         triggerCard={triggerCard}
         id={'ejemplo1'}
-
         />
         <Card title={modelEx2.title} 
         desc={modelEx2.desc} 
@@ -212,30 +211,8 @@ const BoxSection = () => {
         MainformData={formData}
         triggerCard={triggerCard}
         id={'ejemplo2'}
+        />
 
-        />
-        <Card title={modelEx3.title} 
-        desc={modelEx3.desc} 
-        img={modelEx3.img}
-        img2={modelEx3.img2}
-        img3={modelEx3.img3}
-        price={modelEx3.price}
-        handleData={handleData}
-        MainformData={formData}
-        triggerCard={triggerCard}
-        id={'ejemplo3'}
-        />
-        <Card title={modelEx4.title} 
-        desc={modelEx4.desc} 
-        img={modelEx4.img}
-        img2={modelEx4.img2}
-        img3={modelEx4.img3}
-        price={modelEx4.price}
-        handleData={handleData}
-        MainformData={formData}
-        triggerCard={triggerCard}
-        id={'ejemplo4'}
-        />
 
      
       

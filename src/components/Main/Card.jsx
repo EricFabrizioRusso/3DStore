@@ -86,7 +86,8 @@ const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCar
 
   }
 
-  
+
+  console.log(img)
 
 
   return (
@@ -111,7 +112,7 @@ const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCar
         </div>
         {modalOpen &&
 
-          <Modal image={image} image2={img2} image3={img3} handleModal={handleModal} isOpen={modalOpen}/>
+          <Modal image={img} image2={img2} image3={img3} handleModal={handleModal} isOpen={modalOpen}/>
           
         }
 
