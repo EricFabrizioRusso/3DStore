@@ -36,7 +36,7 @@ const modelEx4={
     title: 'Ejemplo4',
     desc: 'Titulo de ejemplo',
     price: 4000,
-    img: 'img/Example.png',
+    img: 'img1',
     img2: 'img2',
     img3: 'img3',
 

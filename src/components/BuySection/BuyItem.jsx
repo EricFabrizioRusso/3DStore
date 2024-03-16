@@ -167,12 +167,12 @@ const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,ca
                   <p className="card-text text-light m-1 fs-6">X{cantidad}</p>
                   <p className="card-text text-success  fs-5">$ {precio}</p>
                 </div>
-                 <a onClick={add} href="#" className="btn btn-primary m-2">Añadir</a>
+                 <a onClick={add} href="#" className="btn btn-secondary bg-secondary m-2">Añadir</a>
                   {/* <input name='count' 
               onChange={handleChange}
               value={cantidad}
               className='m-auto mb-3 text-center text-light fs-6 lh-lg bg-dark border rounded border-light addremove ' type="number" min='0' placeholder='U.'/> */}
-                  <a onClick={remove} href="#" className="btn btn-primary m-2">Remover</a>
+                  <a onClick={remove} href="#" className="btn btn-secondary bg-secondary m-2">Remover</a>
             </div>
         </div>
     </div>

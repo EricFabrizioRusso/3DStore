@@ -5,6 +5,10 @@
 body{
 
   background: #242424;
+  background-image: url('BGPrint3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
   color: #fff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-family: 'Lexend';
