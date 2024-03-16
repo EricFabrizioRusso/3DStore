@@ -196,6 +196,7 @@ const BoxSection = () => {
         img2={modelEx.img2}
         img3={modelEx.img3}
         price={modelEx.price}
+        priceCard={modelEx.priceCard}
         handleData={handleData}
         MainformData={formData}
         triggerCard={triggerCard}
@@ -211,6 +212,17 @@ const BoxSection = () => {
         MainformData={formData}
         triggerCard={triggerCard}
         id={'ejemplo2'}
+        />
+        <Card title={modelEx3.title} 
+        desc={modelEx3.desc} 
+        img={modelEx3.img}
+        img2={modelEx3.img2}
+        img3={modelEx3.img3}
+        price={modelEx3.price}
+        handleData={handleData}
+        MainformData={formData}
+        triggerCard={triggerCard}
+        id={'ejemplo'}
         />
 
 

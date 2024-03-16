@@ -2,7 +2,7 @@ const modelEx={
 
     title: 'Maseta LowPoly',
     desc: 'Maseta Boca:7.5cm Base:7.5cm Alto:8cm largo',
-    price: 7000,
+    price: 1200,
     img: 'img/MasetaL1.jpg',
     img2: 'img/MasetaL2.jpg',
     img3: 'img3',
@@ -12,8 +12,8 @@ const modelEx={
 const modelEx2={
 
     title: 'Llaveros River',
-    desc: 'Llaveros River Plate',
-    price: 750,
+    desc: 'Llaveros River Plate X5',
+    price: 1200,
     img: 'img/LlaveroR1.jpg',
     img2: 'img/LlaveroR2.jpg',
     img3: 'img3',
@@ -22,12 +22,12 @@ const modelEx2={
 }
 const modelEx3={
 
-    title: 'Ejemplo3',
-    desc: 'Titulo de ejemplo',
-    price: 3000,
-    img: 'img/Example.png',
-    img2: 'img2',
-    img3: 'img3',
+    title: 'Broches Paquetes',
+    desc: 'Broches para cerrar bolsas de comida X5',
+    price: 3300,
+    img: 'img/Clip1.jpg',
+    img2: 'img/Clip2.jpg',
+    img3: 'img/Clip3.jpg',
 
 
 }

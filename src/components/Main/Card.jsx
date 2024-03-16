@@ -5,7 +5,7 @@ import Links from '../Header/Links/Links';
 import BuyPage from './Pages/BuyPage';
 
 
-const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCard,id,ammount}) => {
+const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCard,id,ammount,priceCard}) => {
 
   const [modalOpen, setmodalOpen] = useState(false);
   const image = document.getElementById('selectImg');
@@ -98,14 +98,14 @@ const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCar
         <div className="card-body fs-6">
             <h5 className="card-title">{title}</h5>
             <p className="card-text">{desc}</p>
-            <p className='card-text fs-5'>${price}</p>
+            <p className='card-text fs-5 '>${price}</p>
             <form className='d-flex flex-column' onSubmit={handleSubmit}>
               {/* <input name='count' 
               value={formData.count} 
               onChange={handleChange} 
               className='m-auto mb-3 text-center text-light fs-6 lh-lg bg-dark border rounded border-light addremove ' type="number" min='0' placeholder='Cantidad'/> */}
               {blockBtn ?
-                (<input id='addCart'  type='submit' value='Agregar al carrito' className="btn btn-primary m-auto me-auto w-100 lh-lg"/>)
+                (<input id='addCart'  type='submit' value='Agregar al carrito' className="btn btn-secondary bg-secondary m-auto me-auto w-100 lh-lg"/>)
                 :(<h1 className='fs-6 text-center bg-success  text-light btn m-auto me-auto w-100 lh-lg'>Producto Agregado</h1>)
               }
             </form>
