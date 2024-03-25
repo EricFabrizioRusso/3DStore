@@ -91,7 +91,7 @@ const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCar
 
 
   return (
-    <div className="card m-3 mycard text-light bg-dark">
+    <div className="card m-2 mycard text-light bg-dark">
         <a onClick={()=> handleModal()}>
           <img id='selectImg' loading='lazy' src={img} className="card-img-top" alt="..."/>
         </a>
