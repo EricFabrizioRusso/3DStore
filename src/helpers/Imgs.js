@@ -43,4 +43,12 @@ const modelEx4={
 
 }
 
-export {modelEx,modelEx2,modelEx3,modelEx4};
+
+const PromImg=['Banner1.jpg','Banner2.png','Banner3.webp']
+const PromText=[`Consultar por diseños personalizados`,
+'Metodos de pago por transferencia y efectivo',
+'Modelos hechos con impresora 3D']
+
+
+
+export {modelEx,modelEx2,modelEx3,modelEx4,PromImg,PromText};

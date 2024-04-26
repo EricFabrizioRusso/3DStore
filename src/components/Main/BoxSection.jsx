@@ -4,6 +4,7 @@ import { modelEx, modelEx2, modelEx3,modelEx4 } from '../../helpers/Imgs';
 import BuyPage from './Pages/BuyPage';
 import BuyItem from '../BuySection/BuyItem';
 import { MyContext } from '../../helpers/Context';
+import Promotion from './Promotion';
 
 
 
@@ -189,41 +190,45 @@ const BoxSection = () => {
 
 
   return (
-    <div className='d-flex flex-wrap justify-content-center boxsection'>
-        <Card title={modelEx.title} 
-        desc={modelEx.desc} 
-        img={modelEx.img}
-        img2={modelEx.img2}
-        img3={modelEx.img3}
-        price={modelEx.price}
-        priceCard={modelEx.priceCard}
-        handleData={handleData}
-        MainformData={formData}
-        triggerCard={triggerCard}
-        id={'ejemplo1'}
-        />
-        <Card title={modelEx2.title} 
-        desc={modelEx2.desc} 
-        img={modelEx2.img}
-        img2={modelEx2.img2}
-        img3={modelEx2.img3}
-        price={modelEx2.price}
-        handleData={handleData}
-        MainformData={formData}
-        triggerCard={triggerCard}
-        id={'ejemplo2'}
-        />
-        <Card title={modelEx3.title} 
-        desc={modelEx3.desc} 
-        img={modelEx3.img}
-        img2={modelEx3.img2}
-        img3={modelEx3.img3}
-        price={modelEx3.price}
-        handleData={handleData}
-        MainformData={formData}
-        triggerCard={triggerCard}
-        id={'ejemplo'}
-        />
+    <div className='d-flex flex-wrap justify-content-center align-items-center flex-column boxsection'>
+        <Promotion/>
+        <div className='d-flex flex-wrap justify-content-center align-items-center'>
+          <Card title={modelEx.title} 
+          desc={modelEx.desc} 
+          img={modelEx.img}
+          img2={modelEx.img2}
+          img3={modelEx.img3}
+          price={modelEx.price}
+          priceCard={modelEx.priceCard}
+          handleData={handleData}
+          MainformData={formData}
+          triggerCard={triggerCard}
+          id={'ejemplo1'}
+          />
+          <Card title={modelEx2.title} 
+          desc={modelEx2.desc} 
+          img={modelEx2.img}
+          img2={modelEx2.img2}
+          img3={modelEx2.img3}
+          price={modelEx2.price}
+          handleData={handleData}
+          MainformData={formData}
+          triggerCard={triggerCard}
+          id={'ejemplo2'}
+          />
+          <Card title={modelEx3.title} 
+          desc={modelEx3.desc} 
+          img={modelEx3.img}
+          img2={modelEx3.img2}
+          img3={modelEx3.img3}
+          price={modelEx3.price}
+          handleData={handleData}
+          MainformData={formData}
+          triggerCard={triggerCard}
+          id={'ejemplo'}
+          />
+
+        </div>
 
 
      
