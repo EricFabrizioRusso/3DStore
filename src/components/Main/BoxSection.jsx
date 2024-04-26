@@ -262,7 +262,7 @@ const BoxSection = () => {
           {formData.length >= 1 ?
 
             (<div className='finalBuy d-flex flex-column'>
-              <h1 className='mb-3 bg-dark p-3 border border-primary fs-4 rounded'>Total: ${result}</h1>
+              <h1 className='mb-3 bg-dark p-3 border border-primary fs-4 fw-light rounded'>Total: ${result}</h1>
               {/* <a id='btnFinalBuy' onClick={handleItemTrigger}  className='btn btn-primary m-3 fs-4'>Calcular</a> */}
               <a id='btnFinalBuy' onClick={SendMessage}  className='btn btn-primary m-3 fs-4'>Hacer pedido</a>
               <button onClick={handleModal} id='btn-close-buy' className='btn fs-1 text-light m-2'>X</button>

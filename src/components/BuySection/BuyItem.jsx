@@ -165,14 +165,14 @@ const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,ca
                 <h5 className="card-title text-light fs-6">{title}</h5>
                 <div className='d-flex'>
                   <p className="card-text text-light m-1 fs-6">X{cantidad}</p>
-                  <p className="card-text text-success  fs-5">$ {precio}</p>
+                  <p className="card-text text-success fw-light  fs-5">$ {precio}</p>
                 </div>
-                 <a onClick={add} href="#" className="btn btn-secondary bg-secondary m-2">Añadir</a>
+                 <a onClick={add} href="#" className="btn  text-light m-2 bg-info">Añadir</a>
                   {/* <input name='count' 
               onChange={handleChange}
               value={cantidad}
               className='m-auto mb-3 text-center text-light fs-6 lh-lg bg-dark border rounded border-light addremove ' type="number" min='0' placeholder='U.'/> */}
-                  <a onClick={remove} href="#" className="btn btn-secondary bg-secondary m-2">Remover</a>
+                  <a onClick={remove} href="#" className="btn  text-light bg-info m-2">Remover</a>
             </div>
         </div>
     </div>
