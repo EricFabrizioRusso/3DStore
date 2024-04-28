@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Card from './Card'
-import { modelEx, modelEx2, modelEx3,modelEx4 } from '../../helpers/Imgs';
+import { BZodiac, LBoca, PortaL, TZodiac, modelEx, modelEx2, modelEx3 } from '../../helpers/Imgs';
 import BuyPage from './Pages/BuyPage';
 import BuyItem from '../BuySection/BuyItem';
 import { MyContext } from '../../helpers/Context';
@@ -64,7 +64,7 @@ const BoxSection = () => {
     let obj= formData.filter(obj => obj.title !== newData.title)
     obj.push(newData)
     
-    console.log(obj)
+    //console.log(obj)
     setCaclTotal(obj)
     
     
@@ -95,14 +95,14 @@ const BoxSection = () => {
   
   const handleDeleteData=(dItem)=>{
 
-    console.log('item eliminado', dItem)
+    //console.log('item eliminado', dItem)
 
     setFormData(dItem);
     setTriggerCard(triggerCard + 1);
     
   }
-  console.log(formData,'formData')
-  console.log(caclTotal,'calcTotal')
+ // console.log(formData,'formData')
+  //console.log(caclTotal,'calcTotal')
    useEffect(() => {
      
      
@@ -180,7 +180,7 @@ const BoxSection = () => {
       )
     const whatsappLink=`https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`
     window.open(whatsappLink)
-    console.log(message);
+    //console.log(message);
 
   }
 
@@ -216,6 +216,17 @@ const BoxSection = () => {
           triggerCard={triggerCard}
           id={'ejemplo2'}
           />
+          <Card title={LBoca.title} 
+          desc={LBoca.desc} 
+          img={LBoca.img}
+          img2={LBoca.img2}
+          img3={LBoca.img3}
+          price={LBoca.price}
+          handleData={handleData}
+          MainformData={formData}
+          triggerCard={triggerCard}
+          id={'Boca1'}
+          />
           <Card title={modelEx3.title} 
           desc={modelEx3.desc} 
           img={modelEx3.img}
@@ -225,7 +236,40 @@ const BoxSection = () => {
           handleData={handleData}
           MainformData={formData}
           triggerCard={triggerCard}
-          id={'ejemplo'}
+          id={'ejemplo3'}
+          />
+          <Card title={PortaL.title} 
+          desc={PortaL.desc} 
+          img={PortaL.img}
+          img2={PortaL.img2}
+          img3={PortaL.img3}
+          price={PortaL.price}
+          handleData={handleData}
+          MainformData={formData}
+          triggerCard={triggerCard}
+          id={'Porta1'}
+          />
+          <Card title={BZodiac.title} 
+          desc={BZodiac.desc} 
+          img={BZodiac.img}
+          img2={BZodiac.img2}
+          img3={BZodiac.img3}
+          price={BZodiac.price}
+          handleData={handleData}
+          MainformData={formData}
+          triggerCard={triggerCard}
+          id={'BZodiac1'}
+          />
+          <Card title={TZodiac.title} 
+          desc={TZodiac.desc} 
+          img={TZodiac.img}
+          img2={TZodiac.img2}
+          img3={TZodiac.img3}
+          price={TZodiac.price}
+          handleData={handleData}
+          MainformData={formData}
+          triggerCard={triggerCard}
+          id={'TZodiac1'}
           />
 
         </div>

@@ -9,7 +9,7 @@ const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,ca
   const [cantidad, setCantidad] = useState(1);
   const [precio, setPrecio] = useState(price);
   let basePrice=price
-  console.log(item,'item')
+  //console.log(item,'item')
 
   useEffect(() => {
 
@@ -49,7 +49,7 @@ const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,ca
      
 
     
-    console.log(obj)
+    //console.log(obj)
     handleChangeData(obj);
      
    }else{
@@ -88,7 +88,7 @@ const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,ca
       
         
       obj['ammount']=cantidad + 1
-        console.log(obj);
+       // console.log(obj);
   
    
       
@@ -137,9 +137,9 @@ const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,ca
   }*/
   const handleDelete=()=>{
 
-    console.log('eliminando item')
+    //console.log('eliminando item')
     let newForm=formData.filter((el) => el.title !== title)
-    console.log(newForm,'newForm')
+    //console.log(newForm,'newForm')
     handleDeleteData(newForm);
    
 
@@ -167,12 +167,12 @@ const BuyItem = ({item,formData,handleDeleteData,handleChangeData,itemTrigger,ca
                   <p className="card-text text-light m-1 fs-6">X{cantidad}</p>
                   <p className="card-text text-success fw-light  fs-5">$ {precio}</p>
                 </div>
-                 <a onClick={add} href="#" className="btn  text-light m-2 bg-info">Añadir</a>
+                 <a onClick={add} href="#" className="btn  text-light m-2 fw-light bg-info btn-buyItem">Añadir</a>
                   {/* <input name='count' 
               onChange={handleChange}
               value={cantidad}
               className='m-auto mb-3 text-center text-light fs-6 lh-lg bg-dark border rounded border-light addremove ' type="number" min='0' placeholder='U.'/> */}
-                  <a onClick={remove} href="#" className="btn  text-light bg-info m-2">Remover</a>
+                  <a onClick={remove} href="#" className="btn  text-light fw-light bg-info m-2 btn-buyItem">Remover</a>
             </div>
         </div>
     </div>

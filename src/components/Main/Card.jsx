@@ -87,7 +87,7 @@ const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCar
   }
 
 
-  console.log(img)
+  //console.log(img)
 
 
   return (

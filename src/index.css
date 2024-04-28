@@ -306,6 +306,21 @@ li{
 
 }
 
+.btn-buyItem{
+
+  transition: all .1s ease-out;
+
+}
+
+
+.btn-buyItem:active{
+
+  background: rgba(113, 57, 216, 0.5);
+  transform: scale(.9);
+
+}
+
+
 
 
 
