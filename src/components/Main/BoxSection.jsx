@@ -152,7 +152,7 @@ const BoxSection = () => {
       buyModal.classList.add('d-none')
       setMyProp(false);
       document.body.style.overflow = '';
-      console.log('click')
+      //console.log('click')
 
     }
 

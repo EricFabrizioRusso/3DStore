@@ -23,8 +23,8 @@ const Modal = ({ image,image2,image3, handleModal, isOpen }) => {
 
 
 
-  console.log(image)
-  console.log(image2)
+  //console.log(image)
+  //console.log(image2)
 
 
   return (

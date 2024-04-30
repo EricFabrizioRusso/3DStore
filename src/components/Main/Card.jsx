@@ -92,6 +92,9 @@ const Card = ({title,desc,price,img,img2,img3,handleData,MainformData,triggerCar
 
   return (
     <div className="card m-2 mycard text-light bg-dark">
+      <div className='files'>
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><path fill="#ffffff" d="M288 448H64V224h64V160H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64zm-64-96H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64z"/></svg>
+      </div>
         <a onClick={()=> handleModal()}>
           <img id='selectImg' loading='lazy' src={img} className="card-img-top" alt="..."/>
         </a>

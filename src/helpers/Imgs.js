@@ -5,15 +5,15 @@ const modelEx={
     price: 1200,
     img: 'img/MasetaL1.jpg',
     img2: 'img/MasetaL2.jpg',
-    img3: 'img3',
+    img3: 'img/MasetaL1.jpg',
 
 
 }
 const modelEx2={
 
-    title: 'Llaveros River',
-    desc: 'Llaveros River Plate X5',
-    price: 1200,
+    title: 'Llaveros River Plate',
+    desc: 'Llaveros River Plate X4',
+    price: 720,
     img: 'img/LRiver1.JPG',
     img2: 'img/LRiver2.JPG',
     img3: 'img/LRiver3.JPG',
@@ -22,9 +22,9 @@ const modelEx2={
 }
 const LBoca={
 
-    title: 'Llaveros Boca',
-    desc: 'Llaveros River Plate X5',
-    price: 1200,
+    title: 'Llaveros Boca Juniors',
+    desc: 'Llaveros River Plate X4',
+    price: 720,
     img: 'img/LBoca1.JPG',
     img2: 'img/LBoca2.JPG',
     img3: 'img/LBoca3.JPG',
@@ -34,8 +34,8 @@ const LBoca={
 const modelEx3={
 
     title: 'Broches Paquetes',
-    desc: 'Broches para cerrar bolsas de comida X5',
-    price: 3300,
+    desc: 'Ideal para cerrar bolsas X4',
+    price: 1400,
     img: 'img/Clip1.JPG',
     img2: 'img/Clip2.JPG',
     img3: 'img/Clip3.JPG',
@@ -47,8 +47,8 @@ const PortaL={
 
 
     title: 'Porta Lapices',
-    desc: 'Broches para cerrar bolsas de comida X5',
-    price: 3300,
+    desc: 'Para organizar todos tu utiles',
+    price: 350,
     img: 'img/PortaL3.JPG',
     img2: 'img/PortaL2.JPG',
     img3: 'img/PortaL.jpg',
@@ -57,9 +57,9 @@ const PortaL={
 const BZodiac={
 
 
-    title: 'Porta Lapices',
-    desc: 'Broches para cerrar bolsas de comida X5',
-    price: 3300,
+    title: 'Frasco zodiaco grande',
+    desc: 'Personalizados con tu signo',
+    price: 1000,
     img: 'img/BZodiac1.JPG',
     img2: 'img/BZodiac2.JPG',
     img3: 'img/ZodiacGlobal.JPG',
@@ -68,9 +68,9 @@ const BZodiac={
 const TZodiac={
 
 
-    title: 'Porta Lapices',
-    desc: 'Broches para cerrar bolsas de comida X5',
-    price: 3300,
+    title: 'Frasco zodiaco chico',
+    desc: 'Personalizados con tu signo',
+    price: 700,
     img: 'img/TZodiac1.JPG',
     img2: 'img/TZodiac2.JPG',
     img3: 'img/ZodiacGlobal.JPG',
